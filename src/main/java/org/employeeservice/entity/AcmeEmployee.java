@@ -6,7 +6,7 @@
 package org.employeeservice.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -52,8 +52,7 @@ public class AcmeEmployee implements Serializable {
     @Column(name = "LAST_NAME")
     private String lastName;
     @Column(name = "START_DATE")
-    @Temporal(TemporalType.DATE)
-    private Date startDate;
+    private LocalDate startDate;
     @Column(name = "AGE")
     private Integer age;
     @Column(name = "JOB_ID")
@@ -93,11 +92,11 @@ public class AcmeEmployee implements Serializable {
         this.lastName = lastName;
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 

@@ -10,12 +10,12 @@
         </session-timeout>
     </session-config>
     <data-source>
-        <name>java:global/DerbyDataSource</name>
-        <class-name>oracle.jdbc.pool.OracleDataSource</class-name>
-        <server-name>localhost</server-name>
-        <port-number>1527</port-number>
-        <url>jdbc:oracle:thin:@localhost:1521:SFJ</url>
-        <user>IDTEST</user>
-        <password>IDTEST</password>
+        <name>java:global/DataSource</name>
+        <class-name>com.mysql.cj.jdbc.MysqlDataSource</class-name>
+        <server-name>192.168.52.129</server-name>
+        <port-number>3306</port-number>
+        <url>jdbc:mysql://192.168.52.129:3306/test?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
+        <user>root</user>
+        <password>mysql</password>
     </data-source>
 </web-app>

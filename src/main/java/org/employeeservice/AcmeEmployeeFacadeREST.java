@@ -7,8 +7,8 @@ package org.employeeservice;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.*;
+import java.time.format.*;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -74,12 +74,12 @@ public class AcmeEmployeeFacadeREST {
         employee.setFirstName(firstName);
         employee.setLastName(lastName);
         employee.setAge(Integer.valueOf(age));
-        SimpleDateFormat format = new SimpleDateFormat("E M d HH:mm:ss z y");
-        java.util.Date date; 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu/MM/dd");
+        java.time.LocalDate date; 
         try {
-             date = format.parse(startDate);
+             date = LocalDate.parse(startDate, formatter);
         } catch (Exception e) {
-            date = Date.valueOf(LocalDate.now());
+            date = LocalDate.now();
         }
         System.out.println("Date=" + String.valueOf(date));
         employee.setStartDate(date);
