@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,10 +12,10 @@
     <data-source>
         <name>java:global/DataSource</name>
         <class-name>com.mysql.cj.jdbc.MysqlDataSource</class-name>
-        <server-name>192.168.52.129</server-name>
+        <server-name>127.0.0.1</server-name>
         <port-number>3306</port-number>
-        <url>jdbc:mysql://192.168.52.129:3306/test?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
+        <url>jdbc:mysql://127.0.0.1:3306/test?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
         <user>root</user>
-        <password>mysql</password>
+        <password>root</password>
     </data-source>
 </web-app>
